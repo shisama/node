@@ -3459,7 +3459,7 @@ async function openAndClose() {
   try {
     filehandle = await fsPromises.open('thefile.txt', 'r');
   } finally {
-    if (filehandle !== undefined)
+    if (filehandle !== null)
       await filehandle.close();
   }
 }
